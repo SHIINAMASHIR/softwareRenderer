@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="core">
+      <UniqueIdentifier>{4E40957C-3A77-960D-E363-7C10CF79120F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{CF809A7C-BBB7-9B0D-64A4-811050BA170F}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform">
+      <UniqueIdentifier>{4A63C33C-3630-1E48-5F49-0CF04B7553D6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="platform\windows">
+      <UniqueIdentifier>{A44FC440-9048-E392-B97A-C817A5D2C29E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\core\Application.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Entrypoint.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\core\Window.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="src\math\rd_math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="src\platform\windows\Windowswindow.h">
+      <Filter>platform\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="src\renderer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\core\Application.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\platform\windows\Windowswindow.cpp">
+      <Filter>platform\windows</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

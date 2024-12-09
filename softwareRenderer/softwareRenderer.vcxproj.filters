@@ -4,6 +4,9 @@
     <Filter Include="core">
       <UniqueIdentifier>{4E40957C-3A77-960D-E363-7C10CF79120F}</UniqueIdentifier>
     </Filter>
+    <Filter Include="event">
+      <UniqueIdentifier>{071C650F-7330-8DC0-3CB2-3020A88589F1}</UniqueIdentifier>
+    </Filter>
     <Filter Include="math">
       <UniqueIdentifier>{CF809A7C-BBB7-9B0D-64A4-811050BA170F}</UniqueIdentifier>
     </Filter>
@@ -27,6 +30,12 @@
     <ClInclude Include="src\core\core.h">
       <Filter>core</Filter>
     </ClInclude>
+    <ClInclude Include="src\event\Event.h">
+      <Filter>event</Filter>
+    </ClInclude>
+    <ClInclude Include="src\event\WindowEvent.h">
+      <Filter>event</Filter>
+    </ClInclude>
     <ClInclude Include="src\math\rd_math.h">
       <Filter>math</Filter>
     </ClInclude>
@@ -34,8 +43,6 @@
       <Filter>platform\windows</Filter>
     </ClInclude>
     <ClInclude Include="src\renderer.h" />
-    <ClInclude Include="src\event\Event.h" />
-    <ClInclude Include="src\event\WindowEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Application.cpp">

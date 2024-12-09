@@ -10,7 +10,13 @@ workspace "softwareRenderer"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
-IncludeDir["glfw"] = "softwareRenderer/vendor/glfw/include"
+IncludeDir["GLFW"] = "softwareRenderer/vendor/GLFW/include"
+IncludeDir["Glad"] = "softwareRenderer/vendor/Glad/include"
+
+group "Dependencies"
+    include "softwareRenderer/vendor/GLFW"
+    include "softwareRenderer/vendor/Glad"
+group ""
 
 
 project "softwareRenderer"
@@ -34,6 +40,15 @@ project "softwareRenderer"
     includedirs
     {
         "softwareRenderer/src",
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
+    }
+
+    links
+    {
+        "GLFW",
+        "Glad",        
+        "opengl32.lib"
     }
 
 
@@ -41,7 +56,9 @@ project "softwareRenderer"
         systemversion "10.0"
         defines
         {
-            "PLATFORM_WINDOWS"
+            "PLATFORM_WINDOWS",
+            "GLFW_INCLUDE_NONE",
+            "_CRT_SECURE_NO_WARNINGS"
         }
 
     filter "configurations:Debug"

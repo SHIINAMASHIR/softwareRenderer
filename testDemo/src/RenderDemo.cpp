@@ -2,10 +2,10 @@
 
 class RenderDemo : public SWRD::Application
 {
-	friend SWRD::Application& SWRD::getApplicationInstance();
+	friend SWRD::Application& SWRD::GetApplicationInstance();
 };
 
-SWRD::Application& SWRD::getApplicationInstance()
+SWRD::Application& SWRD::GetApplicationInstance()
 {
 	static RenderDemo app;
 	return app;

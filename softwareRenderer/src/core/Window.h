@@ -2,9 +2,9 @@
 #include <string>
 #include <functional>
 
+#include "event/Event.h"
+
 //事件系统尚未完成
-class Event 
-{};
 
 namespace SWRD
 {
@@ -13,26 +13,27 @@ namespace SWRD
 		std::string Title;
 		uint32_t Width, Height;
 		WindowProps(const std::string& title = "MyWindow",
-			uint32_t width = 1600,
-			uint32_t height = 900)
+			uint32_t width = 1024,
+			uint32_t height = 720)
 			:Title(title), Width(width), Height(height)
 		{}
 	};
 
 	class Window
 	{
+	public:
 		using EventCallbackFn = std::function<void(Event&)>;
-		virtual ~Window() = 0;
 
-		virtual void onUpdate() = 0;
+		virtual void OnUpdate() = 0;
 
-		virtual uint32_t getWidth() = 0;
-		virtual uint32_t getHeight() = 0;
-		virtual void setHeight() = 0;
-		virtual void setHeight() = 0;
+		virtual uint32_t GetWidth() const = 0;
+		virtual uint32_t GetHeight() const = 0;
+		virtual void SetWidth(uint32_t) = 0;
+		virtual void SetHeight(uint32_t) = 0;
 
-		virtual void setEventCallback(const EventCallbackFn&) = 0;
+		virtual void SetEventCallback(const EventCallbackFn&) = 0;
+		virtual void* GetNativeWindow() const = 0;
 
-
+		static Window* CreateWindow(const WindowProps& props = WindowProps());
 	};
 }

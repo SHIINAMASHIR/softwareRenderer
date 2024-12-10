@@ -1,10 +1,10 @@
-#include "core/Application.h"
+ï»¿#include "core/Application.h"
 #include "math/rd_math.h"
 
 #include <iostream>
 #include <functional>
 
-//´Ë²¿·ÖÓÃÓÚÁÙÊ±µ÷ÊÔ£¬ÏÂ´Î¼ÓÈëLayer¹ÜÀíÆ÷Ö®ºó£¬½«ÆäÕûºÏµ½LayerµÄäÖÈ¾ÊÂ¼şÖĞ
+//æ­¤éƒ¨åˆ†ç”¨äºä¸´æ—¶è°ƒè¯•ï¼Œä¸‹æ¬¡åŠ å…¥Layerç®¡ç†å™¨ä¹‹åï¼Œå°†å…¶æ•´åˆåˆ°Layerçš„æ¸²æŸ“äº‹ä»¶ä¸­
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
 
@@ -25,7 +25,7 @@ namespace SWRD
 		while(m_Running)
 		{
 
-			//Ö´ĞĞäÖÈ¾
+			//æ‰§è¡Œæ¸²æŸ“
 			glClearColor(0.2f, 0.3f, 0.3f, 1.0f);
 			glClear(GL_COLOR_BUFFER_BIT);
 
@@ -35,7 +35,7 @@ namespace SWRD
 			
 		}
 		std::cout << "over, time:####-##-##, ##:##:##" << std::endl;
-		//äÖÈ¾Æ÷Õı³£½áÊøÈÕÖ¾
+		//æ¸²æŸ“å™¨æ­£å¸¸ç»“æŸæ—¥å¿—
 	}
 
 	void Application::OnEvent(Event& e)
@@ -43,7 +43,7 @@ namespace SWRD
 		Dispatcher dispatch(e);
 		dispatch.Dispatch<WindowCloseEvent>(BIND_EVENT_FUNC(OnWindowClose));
 
-		//Èç¹ûÓĞ·Ö²ã¹ÜÀí£¬Ôò½«Î´ÄÜ´¦ÀíµÄÊÂ¼şÓÉÍâµ½ÄÚ´«µİ£¬Ö±µ½Æä±»´¦ÀíÎªÖ¹
+		//å¦‚æœæœ‰åˆ†å±‚ç®¡ç†ï¼Œåˆ™å°†æœªèƒ½å¤„ç†çš„äº‹ä»¶ç”±å¤–åˆ°å†…ä¼ é€’ï¼Œç›´åˆ°å…¶è¢«å¤„ç†ä¸ºæ­¢
 		while (false);
 	}
 

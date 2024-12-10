@@ -34,4 +34,15 @@ namespace SWRD
 #endif // PLATFORM_MAC
 
 
+#ifdef USE_ASSERT
+	#define RD_CORE_ASSERT(x, ...) {if(!x) {__debugbreak();}} 
+	#define RD_USER_ASSERT(x, ...) {if(!x) {__debugbreak();}} 
+
+#else 
+	#define RD_CORE_ASSERT(x, ...) 
+	#define RD_USER_ASSERT(x, ...) 
+#endif // USE_ASSERT
+
+
+
 }

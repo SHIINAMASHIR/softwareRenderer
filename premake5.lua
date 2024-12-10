@@ -12,6 +12,7 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 IncludeDir = {}
 IncludeDir["GLFW"] = "softwareRenderer/vendor/GLFW/include"
 IncludeDir["Glad"] = "softwareRenderer/vendor/Glad/include"
+IncludeDir["spdlog"] = "softwareRenderer/vendor/spdlog/include"
 
 group "Dependencies"
     include "softwareRenderer/vendor/GLFW"
@@ -33,7 +34,7 @@ project "softwareRenderer"
     files
     {
         "%{prj.name}/src/**.h",
-        "%{prj.name}/src/**.cpp"
+        "%{prj.name}/src/**.cpp",
     }
 
     --include路径
@@ -41,7 +42,8 @@ project "softwareRenderer"
     {
         "softwareRenderer/src",
         "%{IncludeDir.GLFW}",
-        "%{IncludeDir.Glad}"
+        "%{IncludeDir.Glad}",
+        "%{IncludeDir.spdlog}"
     }
 
     links
@@ -94,7 +96,8 @@ project "testDemo"
 
     includedirs
     {
-        "softwareRenderer/src"
+        "softwareRenderer/src",
+        "%{IncludeDir.spdlog}"
     }
 
     links

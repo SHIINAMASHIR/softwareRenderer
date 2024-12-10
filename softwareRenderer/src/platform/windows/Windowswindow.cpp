@@ -1,4 +1,4 @@
-#include "Windowswindow.h"
+ï»¿#include "Windowswindow.h"
 #include "event/WindowEvent.h"
 
 
@@ -24,7 +24,7 @@ namespace SWRD
 		m_Data->Width = props.Width;
 		m_Data->Height = props.Height;
 
-		//glfw³õÊ¼»¯
+		//glfwåˆå§‹åŒ–
 		glfwInit();
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
@@ -40,12 +40,12 @@ namespace SWRD
 
 		glfwMakeContextCurrent(m_Window);
 		int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
-		//¼ÓÔØ°æ±¾µÄÈÕÖ¾
+		//åŠ è½½ç‰ˆæœ¬çš„æ—¥å¿—
 
-		//½«×Ô¶¨ÒåµÄ´°Ìådata´«ÈëglfwµÄÓÃ»§×Ô¶¨ÒåÖ¸Õë
+		//å°†è‡ªå®šä¹‰çš„çª—ä½“dataä¼ å…¥glfwçš„ç”¨æˆ·è‡ªå®šä¹‰æŒ‡é’ˆ
 		glfwSetWindowUserPointer(m_Window, (void*)m_Data);
 
-		//ÉèÖÃ¸÷Àà»Øµ÷º¯Êı£¨ÅäºÏÊÂ¼şÏµÍ³Ê¹ÓÃ£©
+		//è®¾ç½®å„ç±»å›è°ƒå‡½æ•°ï¼ˆé…åˆäº‹ä»¶ç³»ç»Ÿä½¿ç”¨ï¼‰
 		glfwSetWindowCloseCallback(m_Window, [](GLFWwindow* window)
 		{
 			WindowData* data = (WindowData*)glfwGetWindowUserPointer(window);

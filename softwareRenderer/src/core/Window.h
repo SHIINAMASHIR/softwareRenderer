@@ -1,10 +1,10 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
 #include <functional>
 
 #include "event/Event.h"
 
-//ÊÂ¼şÏµÍ³ÉĞÎ´Íê³É
+//äº‹ä»¶ç³»ç»Ÿå°šæœªå®Œæˆ
 
 namespace SWRD
 {

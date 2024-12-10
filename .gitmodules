@@ -1,3 +1,6 @@
 [submodule "softwareRenderer/vendor/glfw"]
 	path = softwareRenderer/vendor/glfw
 	url = git@github.com:SHIINAMASHIR/glfw.git
+[submodule "softwareRenderer/vendor/spdlog"]
+	path = softwareRenderer/vendor/spdlog
+	url = git@github.com:gabime/spdlog.git

@@ -24,6 +24,9 @@
     <ClInclude Include="src\core\Entrypoint.h">
       <Filter>core</Filter>
     </ClInclude>
+    <ClInclude Include="src\core\Log.h">
+      <Filter>core</Filter>
+    </ClInclude>
     <ClInclude Include="src\core\Window.h">
       <Filter>core</Filter>
     </ClInclude>
@@ -46,6 +49,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\core\Application.cpp">
+      <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="src\core\Log.cpp">
       <Filter>core</Filter>
     </ClCompile>
     <ClCompile Include="src\platform\windows\Windowswindow.cpp">

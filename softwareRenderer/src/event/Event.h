@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <string>
 #include <functional>
 
@@ -63,7 +63,7 @@ namespace SWRD
 		{
 			if (m_Event.GetEventType() == T::GetStaticType())
 			{
-				//ÏòÏÂÇ¿×ª *(T*)
+				//å‘ä¸‹å¼ºè½¬ *(T*)
 				m_Event.m_Handled = func(*(T*)&m_Event);
 				return true;
 			}
